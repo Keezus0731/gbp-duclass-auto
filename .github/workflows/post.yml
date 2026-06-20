@@ -1,0 +1,47 @@
+name: GBP デュクラス大阪 自動投稿
+
+on:
+  schedule:
+    # GitHub Actions の cron は UTC。10:00 JST = 01:00 UTC。月(1)・木(4)。
+    - cron: "0 1 * * 1,4"
+  workflow_dispatch: {} # 手動テスト実行用
+
+permissions:
+  contents: write # history.json をコミットするため
+
+concurrency:
+  group: gbp-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install --no-audit --no-fund
+
+      - name: 投稿を実行
+        env:
+          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          # 画像を使う段階で、リポジトリ Variables に IMAGE_BASE_URL を設定すると画像付き投稿になる
+          IMAGE_BASE_URL: ${{ vars.IMAGE_BASE_URL }}
+        run: node post.js
+
+      - name: 履歴をコミット
+        run: |
+          git config user.name "gbp-auto-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet history.json; then
+            git add history.json
+            git commit -m "chore: 投稿履歴を更新 [skip ci]"
+            git push
+          else
+            echo "履歴に変更なし"
+          fi

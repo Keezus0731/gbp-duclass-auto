@@ -1,0 +1,13 @@
+{
+  "name": "gbp-duclass-auto",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "GBP デュクラス大阪 自動投稿（月木・MEO投稿バンク方式）",
+  "scripts": {
+    "post": "node post.js"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.0.0"
+  }
+}
