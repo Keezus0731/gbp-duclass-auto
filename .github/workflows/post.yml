@@ -2,9 +2,13 @@ name: GBP デュクラス大阪 自動投稿
 
 on:
   schedule:
-    # GitHub Actions の cron は UTC。10:00 JST = 01:00 UTC。月(1)・木(4)。
-    - cron: "0 1 * * 1,4"
-  workflow_dispatch: {} # 手動テスト実行用
+    # GitHub Actions の cron は UTC。毎時00分はドロップされやすいので分をズラす。
+    # 月(1)・木(4)。10:13 JST を主に、ドロップ保険として 11:13 / 13:13 JST にも発火。
+    # post.js 側の「本日投稿済みならスキップ」ガードで二重投稿を防止。
+    - cron: "13 1 * * 1,4"  # 10:13 JST（主）
+    - cron: "13 2 * * 1,4"  # 11:13 JST（保険1）
+    - cron: "13 4 * * 1,4"  # 13:13 JST（保険2）
+  workflow_dispatch: {} # 手動実行用
 
 permissions:
   contents: write # history.json をコミットするため
