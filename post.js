@@ -15,6 +15,14 @@ const bank = read('bank.json');
 const historyPath = path.join(DIR, 'history.json');
 const history = fs.existsSync(historyPath) ? read('history.json') : [];
 
+// 二重投稿防止：同じJST日付の投稿が既にあればスキップ（保険cronが複数回発火しても1日1本）
+const jstDate = (ms) => new Date(ms + 9 * 3600 * 1000).toISOString().slice(0, 10);
+const todayJST = jstDate(Date.now());
+if (!process.env.DRY_RUN && history.some((h) => jstDate(new Date(h.postedAt).getTime()) === todayJST)) {
+  console.log(`本日(${todayJST} JST)は既に投稿済みのためスキップします。`);
+  process.exit(0);
+}
+
 const { GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN } = process.env;
 if (!GBP_CLIENT_ID || !GBP_CLIENT_SECRET || !GBP_REFRESH_TOKEN) {
   console.error('❌ 認証情報(環境変数 GBP_CLIENT_ID / GBP_CLIENT_SECRET / GBP_REFRESH_TOKEN)が不足しています。');
