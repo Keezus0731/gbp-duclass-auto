@@ -22,5 +22,13 @@
     "type": "top",
     "image": "chapel/chapel-05.jpg",
     "recycled": false
+  },
+  {
+    "id": "top-venue-banquet",
+    "postedAt": "2026-06-29T01:00:37.602Z",
+    "theme": "venue",
+    "type": "top",
+    "image": "venue/venue-04.jpg",
+    "recycled": false
   }
 ]
