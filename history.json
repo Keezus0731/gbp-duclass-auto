@@ -38,5 +38,13 @@
     "type": "top",
     "image": "photo/photo-03.jpg",
     "recycled": false
+  },
+  {
+    "id": "top-hospitality-staff",
+    "postedAt": "2026-07-02T01:00:41.342Z",
+    "theme": "hospitality",
+    "type": "top",
+    "image": null,
+    "recycled": false
   }
 ]
