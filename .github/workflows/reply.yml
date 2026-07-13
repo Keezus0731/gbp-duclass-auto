@@ -1,0 +1,48 @@
+name: GBP デュクラス大阪 口コミ自動返信
+
+on:
+  schedule:
+    # 毎日。星のみ評価に定型文で自動返信。UTC基準・00分はドロップされやすいので分をズラす。
+    - cron: "13 2 * * *"  # 11:13 JST（主）
+    - cron: "13 5 * * *"  # 14:13 JST（保険）
+  workflow_dispatch: {} # 手動実行用
+
+permissions:
+  contents: write # replied.json / flagged-reviews.json をコミットするため
+
+concurrency:
+  group: gbp-reply
+  cancel-in-progress: false
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install --no-audit --no-fund
+
+      - name: 自動返信を実行
+        env:
+          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          MAX_REPLIES: "10" # 1回の実行での返信上限（スパム防止）
+        run: node reply.js
+
+      - name: 記録をコミット
+        run: |
+          git config user.name "gbp-auto-bot"
+          git config user.email "actions@github.com"
+          git add replied.json flagged-reviews.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: 口コミ返信記録を更新 [skip ci]"
+            git pull --rebase origin main || true
+            git push
+          else
+            echo "記録に変更なし"
+          fi
