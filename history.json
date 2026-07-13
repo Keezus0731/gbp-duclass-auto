@@ -70,5 +70,13 @@
     "type": "top",
     "image": "dress/dress-01.jpg",
     "recycled": false
+  },
+  {
+    "id": "top-photo-maedori",
+    "postedAt": "2026-07-13T01:03:41.043Z",
+    "theme": "photo",
+    "type": "top",
+    "image": "photo/photo-02.jpg",
+    "recycled": false
   }
 ]
