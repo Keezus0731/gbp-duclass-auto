@@ -1,11 +1,9 @@
-name: GBP デュクラス大阪 口コミ自動返信
+name: GBP デュクラス大阪 口コミ自動返信（停止済み・6会場版に統合）
 
+# ⚠️ 2026-07-18: デュクラスの口コミ返信は gbp-meo-auto の6会場版 reply.js に統合したため、
+# こちらの日次スケジュールは停止（二重処理防止）。手動実行(workflow_dispatch)のみ残置。
 on:
-  schedule:
-    # 毎日。星のみ評価に定型文で自動返信。UTC基準・00分はドロップされやすいので分をズラす。
-    - cron: "13 2 * * *"  # 11:13 JST（主）
-    - cron: "13 5 * * *"  # 14:13 JST（保険）
-  workflow_dispatch: {} # 手動実行用
+  workflow_dispatch: {} # 手動実行用（通常は使わない）
 
 permissions:
   contents: write # replied.json / flagged-reviews.json をコミットするため
