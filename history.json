@@ -86,5 +86,13 @@
     "type": "top",
     "image": "food/food-01.jpg",
     "recycled": false
+  },
+  {
+    "id": "top-chapel-jinzen",
+    "postedAt": "2026-07-20T01:00:44.756Z",
+    "theme": "chapel",
+    "type": "top",
+    "image": "chapel/chapel-06.jpg",
+    "recycled": false
   }
 ]
