@@ -102,5 +102,13 @@
     "type": "top",
     "image": null,
     "recycled": false
+  },
+  {
+    "id": "top-hospitality-barrierfree",
+    "postedAt": "2026-07-27T01:00:40.669Z",
+    "theme": "hospitality",
+    "type": "top",
+    "image": null,
+    "recycled": false
   }
 ]
