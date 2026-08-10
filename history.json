@@ -134,5 +134,13 @@
     "type": "fair",
     "image": "dress/dress-01.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-mock-ceremony",
+    "postedAt": "2026-08-10T01:00:40.255Z",
+    "theme": "chapel",
+    "type": "fair",
+    "image": "chapel/chapel-02.jpg",
+    "recycled": false
   }
 ]
