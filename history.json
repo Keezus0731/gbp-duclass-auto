@@ -142,5 +142,13 @@
     "type": "fair",
     "image": "chapel/chapel-02.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-quick60",
+    "postedAt": "2026-08-13T01:00:38.836Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-03.jpg",
+    "recycled": false
   }
 ]
