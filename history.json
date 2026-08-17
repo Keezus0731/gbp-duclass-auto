@@ -150,5 +150,13 @@
     "type": "fair",
     "image": "fair/fair-03.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-weekend",
+    "postedAt": "2026-08-17T01:00:40.134Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-05.jpg",
+    "recycled": false
   }
 ]
