@@ -158,5 +158,13 @@
     "type": "fair",
     "image": "fair/fair-05.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-budget",
+    "postedAt": "2026-08-20T01:00:40.952Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-01.jpg",
+    "recycled": false
   }
 ]
