@@ -174,5 +174,13 @@
     "type": "fair",
     "image": "fair/fair-03.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-firsttime",
+    "postedAt": "2026-08-27T01:00:44.421Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-04.jpg",
+    "recycled": false
   }
 ]
