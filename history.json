@@ -190,5 +190,13 @@
     "type": "fair",
     "image": null,
     "recycled": false
+  },
+  {
+    "id": "fair-coordinate",
+    "postedAt": "2026-08-31T01:00:40.631Z",
+    "theme": "venue",
+    "type": "fair",
+    "image": "venue/venue-01.jpg",
+    "recycled": false
   }
 ]
