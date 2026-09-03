@@ -198,5 +198,13 @@
     "type": "fair",
     "image": "venue/venue-01.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-online",
+    "postedAt": "2026-09-03T01:00:42.281Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-01.jpg",
+    "recycled": false
   }
 ]
