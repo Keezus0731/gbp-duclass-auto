@@ -214,5 +214,13 @@
     "type": "fair",
     "image": "fair/fair-04.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-benefit",
+    "postedAt": "2026-09-10T01:00:41.751Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-05.jpg",
+    "recycled": false
   }
 ]
