@@ -222,5 +222,13 @@
     "type": "fair",
     "image": "fair/fair-05.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-three",
+    "postedAt": "2026-09-14T01:00:45.553Z",
+    "theme": "food",
+    "type": "fair",
+    "image": "food/food-01.jpg",
+    "recycled": false
   }
 ]
