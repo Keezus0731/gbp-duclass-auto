@@ -230,5 +230,13 @@
     "type": "fair",
     "image": "food/food-01.jpg",
     "recycled": false
+  },
+  {
+    "id": "fair-maternity",
+    "postedAt": "2026-09-17T06:05:20.641Z",
+    "theme": "fair",
+    "type": "fair",
+    "image": "fair/fair-03.jpg",
+    "recycled": false
   }
 ]
