@@ -238,5 +238,13 @@
     "type": "fair",
     "image": "fair/fair-03.jpg",
     "recycled": false
+  },
+  {
+    "id": "top-dress-import",
+    "postedAt": "2026-09-21T01:00:38.003Z",
+    "theme": "dress",
+    "type": "top",
+    "image": "dress/dress-03.jpg",
+    "recycled": true
   }
 ]
