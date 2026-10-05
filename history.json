@@ -270,5 +270,13 @@
     "type": "top",
     "image": "venue/venue-02.jpg",
     "recycled": true
+  },
+  {
+    "id": "top-photo-spot",
+    "postedAt": "2026-10-05T01:00:42.839Z",
+    "theme": "photo",
+    "type": "top",
+    "image": "photo/photo-05.jpg",
+    "recycled": true
   }
 ]
