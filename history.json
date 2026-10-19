@@ -302,5 +302,13 @@
     "type": "top",
     "image": "venue/venue-06.jpg",
     "recycled": true
+  },
+  {
+    "id": "top-dress-japanese",
+    "postedAt": "2026-10-19T01:00:43.997Z",
+    "theme": "dress",
+    "type": "top",
+    "image": "dress/dress-03.jpg",
+    "recycled": true
   }
 ]
