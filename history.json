@@ -334,5 +334,13 @@
     "type": "top",
     "image": "chapel/chapel-02.jpg",
     "recycled": true
+  },
+  {
+    "id": "top-venue-small",
+    "postedAt": "2026-11-02T01:00:42.930Z",
+    "theme": "small",
+    "type": "top",
+    "image": null,
+    "recycled": true
   }
 ]
